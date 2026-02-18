@@ -1,0 +1,13 @@
+automate Symboles {
+    alphabet = {0, 1, +, *};
+    etats = {q0, q1, q2};
+    initial = q0;
+    finaux = {q2};
+    transitions = {
+        q0 : 0 -> q1;
+        q0 : 1 -> q1;
+        q1 : + -> q0;
+        q1 : * -> q2;
+    };
+    mots exemples/mots_symboles.txt;
+}

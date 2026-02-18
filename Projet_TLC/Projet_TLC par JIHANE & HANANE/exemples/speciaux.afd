@@ -1,0 +1,12 @@
+automate Speciaux {
+    alphabet = {@, #, $};
+    etats = {s0, s1, s2};
+    initial = s0;
+    finaux = {s2};
+    transitions = {
+        s0 : @ -> s1;
+        s1 : $ -> s2;
+        s2 : # -> s0;
+    };
+    mots exemples/mots_speciaux.txt;
+}

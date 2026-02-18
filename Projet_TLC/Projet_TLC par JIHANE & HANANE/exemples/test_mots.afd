@@ -1,0 +1,14 @@
+automate Simple {
+    alphabet = {a, b, c};
+    etats = {q0, q1, q2};
+    initial = q0;
+    finaux = {q2};
+    transitions = {
+        q0 : a -> q1;
+        q1 : b -> q2;
+        q2 : a -> q1;
+        q2 : b -> q2;
+        q2 : c -> q2;
+    };
+    mots exemples/mots.txt;
+}
